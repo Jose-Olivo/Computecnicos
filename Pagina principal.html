@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computecnicos - Productos Electrónicos</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="CSS/Pagina principal.css">
+    <!-- Incluir Lucide icons para los iconos -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Contenedor principal del encabezado -->
+    <div class="header-container">
+        <!-- Encabezado principal -->
+        <header class="main-header">
+            <div class="header-content">
+                <!-- Logo y nombre de la empresa -->
+                <a href="/" class="logo">
+                    <img src="IMG/Icono de computecnico.png" alt="Computecnicos Logo">
+                    <span class="logo-text">
+                        <span class="logo-compu">COMPU</span><span class="logo-tecnicos">TECNICOS</span>
+                    </span>
+                </a>
+
+                <!-- Navegación principal -->
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/productos">Productos</a></li>
+                        <li><a href="/tiendas">Tiendas Autorizadas</a></li>
+                        <li><a href="/descargas">Descargas</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Controles de usuario (idioma, inicio de sesión, carrito) -->
+                <div class="user-controls">
+                    <!-- Selector de idioma -->
+                    <button class="language-selector">
+                        <i data-lucide="globe" class="icon"></i>
+                        <span>CO</span>
+                    </button>
+                    <!-- Enlace de inicio de sesión/registro -->
+                    <a href="/login" class="login-link">Iniciar sesión / Registrarse</a>
+                    <!-- Enlace al carrito de compras -->
+                    <a href="/cart" class="cart-link">
+                        <i data-lucide="shopping-cart" class="icon"></i>
+                        <span>0</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navegación de categorías de productos -->
+        <nav class="category-nav">
+            <ul>
+                <li><a href="/todos">Todos</a></li>
+                <li><a href="/computadoras">Computadoras</a></li>
+                <li><a href="/smartphones">Smartphones</a></li>
+                <li><a href="/accesorios">Accesorios</a></li>
+                <li><a href="/sonido">Equipo de sonido</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Script para inicializar los iconos de Lucide -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

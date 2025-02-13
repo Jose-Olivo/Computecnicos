@@ -1,0 +1,400 @@
+/* Importar fuentes de iconos */
+@import url("https://use.fontawesome.com/releases/v6.5.2/css/all.css");
+
+/* Restablecer estilos predeterminados y establecer box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+/* Definir variables de color */
+:root {
+  --bg-color: #000000;
+  --second-bg-color: #131313;
+  --text-color: white;
+  --main-color: #ff0000;
+}
+
+/* Establecer tamaño de fuente base */
+html {
+  font-size: 60%;
+  background-color: var(--bg-color);
+}
+
+/* Establecer estilos base para el cuerpo */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Estilos del encabezado */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 4rem 8% 4rem;
+  background: #0000004d;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+/* Estilos del logo */
+.logo {
+  font-size: 3rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo a {
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo img {
+  width: 112px;
+  height: 64px;
+  transition: 0.3s ease;
+  color: var(--main-color);
+}
+
+.logo:hover img {
+  transform: scale(1.2);
+  color: var(--main-color);
+}
+
+.logo-compu {
+  color: var(--main-color);
+  text-shadow: 0 0 25px var(--main-color);
+  transform: scale(1.1);
+}
+
+.logo-tecnicos {
+  color: var(--text-color);
+  transform: scale(1.1);
+}
+
+/* Estilos de sección */
+section {
+  min-height: 100vh;
+  padding: 10rem 8% 10rem;
+}
+
+/* Estilos de la sección de inicio */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  text-align: left;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.home-content h3 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-size: 3.5rem;
+}
+
+.home-content h1 {
+  font-size: 7rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8;
+  max-width: 1000px;
+}
+
+/* Estilos de iconos sociales */
+.social-icons a {
+  width: 4.5rem;
+  height: 4.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  font-size: 2.5rem;
+  border-radius: 50%;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: var(--text-color);
+  transform: scale(1.3) translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color);
+}
+
+/* Estilos de botones */
+.btn {
+  background-color: black;
+  color: var(--main-color);
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px var(--main-color);
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+
+.btn-group a:hover {
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color); 
+  color: black;
+}
+
+/* Estilos para el botón de menú hamburguesa */
+.menu-btn {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.menu-btn__burger {
+  width: 30px;
+  height: 3px;
+  background: var(--text-color);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(10px);
+}
+
+/* Animación para el botón de menú hamburguesa */
+.menu-btn.open .menu-btn__burger {
+  background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg);
+}
+
+/* Estilos de animación de texto */
+.text-animation {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.text-animation span {
+  position: relative;
+}
+
+.text-animation span::before {
+  content: "Web Developer";
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+
+.text-animation span::after {
+  content: "";
+  background-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 80px);
+  height: 100%;
+  border-left: 3px solid var(--bg-color);
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+/* Animaciones de fotogramas clave */
+@keyframes cursor {
+  to {
+    border-left: 2px solid var(--main-color);
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "Innovación.";
+  }
+  21%,
+  40% {
+    content: "Confianza.";
+  }
+  41%,
+  60% {
+    content: "Calidad,";
+  }
+  61%,
+  80% {
+    content: "Éxito.";
+  }
+  81%,
+  100% {
+    content: "";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+/* Media queries para responsividad */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 4%;
+  }
+
+  section {
+    padding: 10rem 4% 2rem;
+  }
+
+  .home {
+    padding: 0 4%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    background: var(--bg-color);
+  }
+
+  .navbar {
+    position: fixed;
+    top: 80px; /* Ajusta esto según la altura de tu header */
+    right: -100%;
+    width: 100%;
+    height: calc(100% - 80px);
+    padding: 1rem 4%;
+    background: var(--bg-color);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: .25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.2rem;
+  }
+}
+
+

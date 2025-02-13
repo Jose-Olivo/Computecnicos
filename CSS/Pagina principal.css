@@ -1,0 +1,176 @@
+/* Definición de variables globales para colores */
+:root {
+  --bg-color: #1a1a1a;
+  --nav-bg-color: #ff0000;
+  --text-color: #ffffff;
+  --text-hover: #e0e0e0;
+  --text-muted: #a0a0a0;
+}
+
+/* Estilos generales para el body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+}
+
+/* Contenedor del encabezado */
+.header-container {
+  width: 100%;
+}
+
+/* Estilos para el encabezado principal */
+.main-header {
+  background-color: var(--bg-color);
+  padding: 1rem;
+}
+
+/* Contenido del encabezado */
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos del logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 32px;
+  width: 56px;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.logo-compu {
+  color: #ff0000;
+}
+
+.logo-tecnicos {
+  color: var(--text-color);
+}
+
+/* Estilos de la navegación principal */
+.main-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: var(--text-color);
+}
+
+/* Estilos para los controles de usuario */
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Estilos para el selector de idioma */
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+/* Estilos para los enlaces de inicio de sesión y carrito */
+.login-link, .cart-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Efecto hover para los controles de usuario */
+.login-link:hover, .cart-link:hover, .language-selector:hover {
+  color: var(--text-color);
+}
+
+/* Estilos para los iconos */
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Estilos para la navegación de categorías */
+.category-nav {
+  background-color: var(--nav-bg-color);
+  padding: 0.5rem;
+}
+
+.category-nav ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.category-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.category-nav a:hover {
+  color: var(--text-hover);
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  /* Ocultar la navegación principal en pantallas pequeñas */
+  .main-nav {
+      display: none;
+  }
+
+  /* Ajustar el padding del contenido del encabezado */
+  .header-content {
+      padding: 0 1rem;
+  }
+
+  /* Reducir el espacio entre los controles de usuario */
+  .user-controls {
+      gap: 0.5rem;
+  }
+
+  /* Ocultar el enlace de inicio de sesión en pantallas pequeñas */
+  .login-link {
+      display: none;
+  }
+
+  /* Ajustar el espaciado y permitir que las categorías se envuelvan en pantallas pequeñas */
+  .category-nav ul {
+      gap: 1rem;
+      padding: 0 1rem;
+      flex-wrap: wrap;
+  }
+}
